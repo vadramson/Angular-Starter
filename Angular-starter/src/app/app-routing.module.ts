@@ -7,7 +7,7 @@ import {WelcomeComponent} from "./welcome/welcome.component";
 
 const routes: Routes = [
   {path: '', component: WelcomeComponent},
-  {path: 'regions', component: RegionsComponent},
+  {path: 'clothing', component: RegionsComponent},
   {path: 'towns', component: TownsComponent},
   {path: 'agency', component: AgenciesComponent}
 ];

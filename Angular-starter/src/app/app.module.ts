@@ -8,8 +8,9 @@ import { RegionsComponent } from './regions/regions.component';
 import { TownsComponent } from './towns/towns.component';
 import { AgenciesComponent } from './agencies/agencies.component';
 import { WelcomeComponent } from './welcome/welcome.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+
 
 
 
@@ -26,6 +27,7 @@ import {HttpClientModule} from "@angular/common/http";
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
   ],
   providers: [],

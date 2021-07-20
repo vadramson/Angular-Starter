@@ -12,17 +12,29 @@ export class WelcomeComponent implements OnInit {
   name: string;
   email: string;
   dataSource: any;
-
+  sys_file_url: any;
   constructor(private external: ApiCommService, private router: Router) {
+      this.getImages()
+      this.sys_file_url = this.external.getFile_url()
       this.name = localStorage.getItem('name')
       this.email = localStorage.getItem('email')
   }
   responseData: any;
+  images_from_server: any;
   authenticated = 'Unauthorized';
 
   authenticationData = {"username":"", "password":""}
 
   ngOnInit(): void {
+  }
+
+  datasent = {"some":"data"}
+
+  getImages(){
+    this.external.postData(this.datasent, 'get_uploaded_images/').subscribe((data: any) => {
+      this.images_from_server = data.fashion_images
+      console.log("Data from server" + this.images_from_server)
+    })
   }
 
   login(){
